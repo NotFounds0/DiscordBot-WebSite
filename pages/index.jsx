@@ -4,6 +4,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 export default function Home() {
+
+    const config = {
+        botdavet: "https://google.com"
+    }
+
   return (
     <>
       <Head>
@@ -18,16 +23,16 @@ export default function Home() {
           <div className='flex flex-col justify-center items-center h-[500px] gap-10'>
                 <div className=''>
                     
-                    <h1 className='text-5xl font-bold text-white'><span className='text-blue-600'>PlusBot</span> ile sunucunuz daha iyi</h1>
+                    <h1 className='md:text-5xl text-3xl font-bold text-white w-[450px] md:w-full'><span className='text-blue-600'>PlusBot</span> ile sunucunuz daha iyi</h1>
                 </div>
                 <div className='flex gap-5'>
-                    <a href="#" className='bg-sky-600/20 font-semibold hover:bg-sky-600/30 px-8 py-3 rounded-lg text-blue-600 hover:-translate-y-3 duration-300'>Sunucuna Ekle</a>
-                    <a href="#" className='bg-blue-600 px-8 rounded-lg text-white hover:bg-blue-900 flex justify-center items-center hover:translate-y-3 duration-300'>Giriş Yap</a>
+                    <a href={config.botdavet} className='bg-sky-600/20 font-semibold hover:bg-sky-600/30 px-8 py-3 rounded-lg text-blue-600 hover:-translate-y-3 duration-300'>Sunucuna Ekle</a>
+                    <a href={config.botdavet} className='bg-blue-600 px-8 rounded-lg text-white hover:bg-blue-900 flex justify-center items-center hover:translate-y-3 duration-300'>Giriş Yap</a>
                 </div>
             </div>
 
             <div className='flex flex-col gap-48'>
-                <div className='flex justify-center items-center gap-44'>
+                <div className='md:flex justify-center items-center gap-10 flex-wrap'>
                     <div className="relative w-[550px] h-[320px]">
                         <Image alt='' src={'/images/pb-bg.png'} fill/>
                     </div>
@@ -38,13 +43,14 @@ export default function Home() {
                     
                 </div>
 
-                <div className='flex justify-center items-center gap-44'>
+                <div className='md:flex justify-center items-center gap-10 flex-wrap'>
+                   
+                    <div className="relative w-[550px] h-[320px]">
+                        <Image alt='' src={'/images/pb-bg.png'} fill/>
+                    </div>
                     <div className="">
                         <h1 className='text-5xl text-blue-600 font-bold'>PlusBot</h1>
                         <p className='w-[450px] text-white font-medium text-sm'>Eğlence ve kullanıcı komutları ile daha iyi</p>
-                    </div>
-                    <div className="relative w-[550px] h-[320px]">
-                        <Image alt='' src={'/images/pb-bg.png'} fill/>
                     </div>
                 </div>
             </div>
@@ -54,8 +60,8 @@ export default function Home() {
                 </div>
             </div>
 
-           <div className='mt-28 justify-between flex my-10'>
-           <div className=' flex flex-col  gap-5'>
+           <div className=' md:justify-between md:flex my-10'>
+           <div className=' flex flex-col  gap-5 my-10'>
                 <h1 className='text-blue-600 text-4xl font-bold'>Stat PlusBot</h1>
                 <div className="flex justify-start flex-wrap gap-10">
                     <StatCards/>
