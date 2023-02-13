@@ -60,7 +60,7 @@ export default function Home() {
                 </div>
             </div>
 
-           <div className=' md:justify-between md:flex my-10'>
+           <div className=' md:justify-between md:flex my-10 items-center '>
            <div className=' flex flex-col  gap-5 my-10'>
                 <h1 className='text-blue-600 text-4xl font-bold'>Stat PlusBot</h1>
                 <div className="flex justify-start flex-wrap gap-10">
