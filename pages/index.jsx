@@ -43,14 +43,15 @@ export default function Home() {
                     
                 </div>
 
-                <div className='md:flex justify-center items-center gap-10 flex-wrap'>
-                <div className="">
-                        <h1 className='text-5xl text-blue-600 font-bold'>PlusBot</h1>
-                        <p className='w-[450px] text-white font-medium text-sm'>Eğlence ve kullanıcı komutları ile daha iyi</p>
-                    </div>
+                <div className='md:flex justify-center items-center gap-10 flex-wrap flex-row-reverse'>
                    
                     <div className="relative w-[550px] h-[320px]">
                         <Image alt='' src={'/images/pb-bg.png'} fill/>
+                    </div>
+
+                    <div className="">
+                        <h1 className='text-5xl text-blue-600 font-bold'>PlusBot</h1>
+                        <p className='w-[450px] text-white font-medium text-sm'>Eğlence ve kullanıcı komutları ile daha iyi</p>
                     </div>
                    
                 </div>
