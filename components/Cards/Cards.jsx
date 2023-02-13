@@ -18,12 +18,12 @@ const CardsItem = ({title,desc,icon}) =>{
 const Cards = () => {
   return (
     <div className='gap-10 grid-cols-1 md:grid-cols-3 grid'>
-      <CardsItem title='Peformans' desc='bot hızlı ve performansız ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
-      <CardsItem title='Peformans' desc='bot hızlı ve performansız ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
-      <CardsItem title='Peformans' desc='bot hızlı ve performansız ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
-      <CardsItem title='Peformans' desc='bot hızlı ve performansız ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
-      <CardsItem title='Peformans' desc='bot hızlı ve performansız ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
-      <CardsItem title='Peformans' desc='bot hızlı ve performansız ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
+      <CardsItem title='Peformans' desc='bot hızlı ve performanslı ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
+      <CardsItem title='Peformans' desc='bot hızlı ve performanslı ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
+      <CardsItem title='Peformans' desc='bot hızlı ve performanslı ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
+      <CardsItem title='Peformans' desc='bot hızlı ve performanslı ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
+      <CardsItem title='Peformans' desc='bot hızlı ve performanslı ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
+      <CardsItem title='Peformans' desc='bot hızlı ve performanslı ve pingsiz sunucunuzu daha iyi halde görün' icon={<FaRocket/>}/>
     </div>
   )
 }
