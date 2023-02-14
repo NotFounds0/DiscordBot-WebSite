@@ -1,3 +1,15 @@
+<hr>
+
+Beğenirseniz Starlamayı Unutmayın. <br>
+Don't forget to give a star if you like it.
+
+Social Media
+instagram = https://www.instagram.com/sametrx06 <br>
+discord = discord.gg/bilgisayar
+
+<hr>
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
