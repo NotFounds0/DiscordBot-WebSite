@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         'bluee': '#1633b5',
+        'orange': '#ff7819'
       },
     },
   },
