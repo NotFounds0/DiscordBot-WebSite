@@ -32,7 +32,7 @@ export default function Home() {
                 <div className='flex flex-col gap-48'>
 
                     <div className='xl:bg-gray-800 h-[350px] rounded-3xl md:flex justify-center items-center gap-10 flex-wrap'>
-                        <div className="relative w-[550px] h-[320px]">
+                        <div className="relative w-full h-[320px] md:w-[550px]">
                             <Image alt='' src={'/images/pb-bg.png'} fill className='' />
                         </div>
                         <div className="">
@@ -44,7 +44,7 @@ export default function Home() {
 
                     <div className=' xl:bg-gray-800 h-[350px] rounded-3xl md:flex justify-center items-center gap-10 flex-wrap flex-row-reverse'>
 
-                        <div className="relative w-[550px] h-[320px]">
+                        <div className="relative w-full h-[400px] md:w-[550px] md:h-[320px]">
                             <Image alt='' src={'/images/pb-bg.png'} fill />
                         </div>
 
