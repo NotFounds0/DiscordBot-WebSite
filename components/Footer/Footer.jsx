@@ -23,8 +23,8 @@ const Footer = () => {
                     <li>Vote</li>
                 </ul>
                 <div className='flex flex-col text-center gap-y-1'>
-                    <span className='text-gray-400 font-medium'>Tasarımcısı ve geliştiricisi</span>
-                    <h1 className='text-gray-200 uppercase font-bold underline'>Developer Team</h1>
+                    <span className='text-gray-400 font-medium'>Tasarımcısı ve Geliştiricisi</span>
+                    <a href='https://github.com/SametYurtoglu' target={'_blank'} className='text-gray-200 uppercase font-bold underline'>NotFounds</a>
                     <div className='flex justify-center gap-x-1'>
                         <a href="#" className='hover:bg-white text-pink-600 text-xl p-1 rounded-full'><AiOutlineInstagram /></a>
                         <a href="#" className='hover:bg-white text-red-600 text-xl p-1 rounded-full'><AiFillYoutube /></a>

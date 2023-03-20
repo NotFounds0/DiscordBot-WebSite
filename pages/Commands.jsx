@@ -1,7 +1,20 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useState } from 'react'
+import data from '../public/data.json'
 
 const Commands = () => {
+    const [query, setQuery] = useState('')
+    const [results, setResults] = useState([])
+    const handleInputChange = (event) => {
+        const query = event.target.value
+        setQuery(query)
+
+        const filteredData = data.filter((item) => {
+            return item.title.toLowerCase().includes(query.toLowerCase())
+        })
+
+        setResults(filteredData)
+    }
     return (
         <>
             <Head>
@@ -10,9 +23,25 @@ const Commands = () => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="">
-                Commands
+            <div className=" container mx-auto">
+                <div className='flex flex-col gap-3'>
+                    <div className="">
+                        <input type="text" value={query} onChange={handleInputChange} className='w-full bg-gray-500 p-2 rounded-lg placeholder:text-gray-200 outline outline-blue-700 border-blue-600 border-2 text-white' placeholder='Komut Ara' />
+                    </div>
+                    <div className='h-96 overflow-y-scroll scrollbar-thumb-gray-300 scrollbar-track-gray-100'>
+                        <ul className='flex flex-col gap-2'>
+                            {results.map((item) => (
+                                <li key={item.id} className='relative select-none bg-gray-700 w-full rounded-lg p-2 text-white cursor-pointer hover:bg-gray-800 flex items-center gap-2'>
+                                    <h2>{item.title}</h2>
+                                    <p className='text-gray-400'>{item.desc}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+
         </>
     )
 }
