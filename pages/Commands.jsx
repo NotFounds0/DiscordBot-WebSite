@@ -1,20 +1,14 @@
+import axios from 'axios'
 import Head from 'next/head'
-import React, { useState } from 'react'
-import data from '../public/data.json'
+import React, { useEffect, useState } from 'react'
 
-const Commands = () => {
-    const [query, setQuery] = useState('')
-    const [results, setResults] = useState([])
-    const handleInputChange = (event) => {
-        const query = event.target.value
-        setQuery(query)
 
-        const filteredData = data.filter((item) => {
-            return item.title.toLowerCase().includes(query.toLowerCase())
-        })
+const Commands = ({ datas }) => {
+    const [search, setSearch] = useState("");
 
-        setResults(filteredData)
-    }
+    const Filtered = datas.filter((data) =>
+        data.title.toLowerCase().includes(search.toLowerCase())
+    );
     return (
         <>
             <Head>
@@ -26,24 +20,35 @@ const Commands = () => {
             <div className=" container mx-auto">
                 <div className='flex flex-col gap-3'>
                     <div className="">
-                        <input type="text" value={query} onChange={handleInputChange} className='w-full bg-gray-500 p-2 rounded-lg placeholder:text-gray-200 outline outline-blue-700 border-blue-600 border-2 text-white' placeholder='Komut Ara' />
+                        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className='w-full bg-gray-500 p-2 rounded-lg placeholder:text-gray-200 outline outline-blue-700 border-blue-600 border-2 text-white' placeholder='Komut Ara' />
                     </div>
-                    <div className='h-96 overflow-y-scroll scrollbar-thumb-gray-300 scrollbar-track-gray-100'>
+                    <div className='h-[500px] overflow-y-scroll scrollbar-thumb-gray-300 scrollbar-track-gray-100'>
                         <ul className='flex flex-col gap-2'>
-                            {results.map((item) => (
-                                <li key={item.id} className='relative select-none bg-gray-700 w-full rounded-lg p-2 text-white cursor-pointer hover:bg-gray-800 flex items-center gap-2'>
-                                    <h2>{item.title}</h2>
-                                    <p className='text-gray-400'>{item.desc}</p>
+                            {Filtered.map((data) => (
+                                <li key={data.id} className='relative select-none bg-gray-700 w-full rounded-lg p-2 text-white cursor-pointer hover:bg-gray-800 flex items-center gap-2'>
+                                    <span className='bg-gray-900 p-2 rounded-lg'>{data.id}</span>
+                                    <h2>{data.title}</h2>
+                                    <span>-</span>
+                                    <p className='text-gray-400'>{data.desc}</p>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
             </div>
-
-
         </>
     )
+}
+
+export async function getServerSideProps() {
+    const res = await fetch("http://localhost:3000/api/data");
+    const datas = await res.json();
+
+    return {
+        props: {
+            datas,
+        },
+    };
 }
 
 export default Commands
