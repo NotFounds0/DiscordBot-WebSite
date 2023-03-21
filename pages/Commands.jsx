@@ -1,6 +1,5 @@
-import axios from 'axios'
 import Head from 'next/head'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 
 const Commands = ({ datas }) => {
