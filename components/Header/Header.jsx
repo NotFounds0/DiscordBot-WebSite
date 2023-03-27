@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
-import { AiFillCloseSquare, AiOutlineMenu } from 'react-icons/ai'
+import { AiOutlineMenu } from 'react-icons/ai'
 
 const Header = () => {
     const router = useRouter()
     const [nav, setnav] = useState(false)
     return (
-        <div className='container mx-auto '>
+        <div className='container mx-auto'>
             <div className="flex justify-between items-center h-[6rem] w-full">
                 <div className="flex gap-10 items-center">
                     <h1 className='text-3xl font-bold'>
@@ -36,7 +36,7 @@ const Header = () => {
                             </li>
                         </ul>
                     </div>
-                    {nav && <div className=''>
+                    {nav && <div className='z-50'>
                         <div className="bg-gray-800 w-full h-[160px] flex md:hidden top-[70px] left-0 absolute justify-center">
                             <ul className='flex flex-col justify-center text-center h-full gap-1 text-[15px] font-medium'>
                                 <li>

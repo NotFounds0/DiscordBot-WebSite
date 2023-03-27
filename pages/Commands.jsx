@@ -9,7 +9,7 @@ const Commands = ({ datas }) => {
 
     useEffect(() => {
         async function fetchData() {
-            const result = await axios.get('http://localhost:3000/api/data');
+            const result = await axios.get('/api/data');
             setData(result.data);
         }
 
