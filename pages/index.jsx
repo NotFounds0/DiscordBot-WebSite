@@ -5,6 +5,7 @@ import Image from 'next/image'
 
 export default function Home() {
 
+
     const config = {
         botdavet: "https://google.com"
     }
@@ -29,41 +30,35 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className='flex flex-col gap-48'>
-
-                    <div className='xl:bg-gray-800 h-[350px] rounded-3xl md:flex justify-center items-center gap-10 flex-wrap'>
-                        <div className="relative w-full h-[320px] md:w-[550px]">
-                            <Image alt='' src={'/images/pb-bg.png'} fill className='' />
+                <div className=''>
+                    <div className='md:flex flex flex-wrap text-center justify-between items-center'>
+                        <div className="w-[600px] h-[300px] relative">
+                            <Image alt='' src={'/images/pb-bg.png'} fill className='rounded-xl' />
                         </div>
-                        <div className="">
-                            <h1 className='text-5xl text-blue-600 font-bold'>PlusBot</h1>
-                            <p className='w-[450px] text-white font-medium text-sm'>Yetkili ve koruma Komutları ile sunucunuzu daha güvenli hale getirin</p>
+                        <div className=''>
+                            <h1 className='text-5xl font-bold'>
+                                <span className='text-blue-600'>Plus</span>
+                                <span className='text-white'>Bot</span>
+                            </h1>
+                            <p className='md:w-[450px] w-[300px] text-white font-medium text-sm'>Yetkili ve koruma Komutları ile sunucunuzu daha güvenli hale getirin</p>
                         </div>
-
-                    </div>
-
-                    <div className=' xl:bg-gray-800 h-[350px] rounded-3xl md:flex justify-center items-center gap-10 flex-wrap flex-row-reverse'>
-
-                        <div className="relative w-full h-[400px] md:w-[550px] md:h-[320px]">
-                            <Image alt='' src={'/images/pb-bg.png'} fill />
-                        </div>
-
-                        <div className="">
-                            <h1 className='text-5xl text-blue-600 font-bold'>PlusBot</h1>
-                            <p className='w-[450px] text-white font-medium text-sm'>Eğlence ve kullanıcı komutları ile daha iyi</p>
-                        </div>
-
                     </div>
                 </div>
-                <div className='mt-56'>
-                    <div className="">
-                        <Cards />
-                    </div>
+
+
+
+
+                <div className="mt-20">
+                    <Cards />
                 </div>
+
 
                 <div className='md:flex flex-wrap justify-center  md:justify-between items-center my-10'>
                     <div className=' flex flex-col  gap-5 my-10'>
-                        <h1 className='text-blue-600 text-4xl font-bold'>PlusBot</h1>
+                        <h1 className='text-4xl font-bold'>
+                            <span className='text-blue-600'>Plus</span>
+                            <span className='text-white'>Bot</span>
+                        </h1>
                         <div className="flex justify-start flex-wrap gap-10">
                             <StatCards />
                         </div>

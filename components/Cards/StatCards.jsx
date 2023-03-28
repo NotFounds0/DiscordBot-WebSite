@@ -4,6 +4,7 @@ import {HiUsers} from 'react-icons/hi'
 import {BiCommand} from 'react-icons/bi'
 
 const StatCardsItem = ({number,icon,title}) =>{
+  
     return(
         <div className='flex flex-col gap-5'>
         <div className='text-center'>

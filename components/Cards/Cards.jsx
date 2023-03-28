@@ -9,7 +9,7 @@ const CardsItem = ({title,desc,icon}) =>{
         </div>
         <div className='text-white'>
             <h1 className='text-3xl font-bold'>{title}</h1>
-            <p className='text-md text-gray-500 font-medium'>{desc}</p>
+            <p className='md:w-[400px] w-[300px] text-gray-500 font-medium'>{desc}</p>
         </div>
     </div>
   )

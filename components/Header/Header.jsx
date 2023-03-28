@@ -32,7 +32,7 @@ const Header = () => {
                                 <Link href={'/addbot'} className={router.pathname === '/addbot' ? 'text-white' : 'text-blue-500 hover:text-blue-600'}>Add Bot</Link>
                             </li>
                             <li>
-                                <Link href={'/addbot'} className={router.pathname === '/addbot' ? 'text-white' : 'text-blue-500 hover:text-blue-600'}>Sponsor</Link>
+                                <Link href={'/sponsor'} className={router.pathname === '/sponsor' ? 'text-white' : 'text-blue-500 hover:text-blue-600'}>Sponsor</Link>
                             </li>
                         </ul>
                     </div>
@@ -55,7 +55,7 @@ const Header = () => {
                                     <Link href={'/addbot'} className={router.pathname === '/addbot' ? 'text-white' : 'text-blue-500 hover:text-blue-600'}>Add Bot</Link>
                                 </li>
                                 <li>
-                                    <Link href={'/addbot'} className={router.pathname === '/addbot' ? 'text-white' : 'text-blue-500 hover:text-blue-600'}>Sponsor</Link>
+                                    <Link href={'/sponsor'} className={router.pathname === '/sponsor' ? 'text-white' : 'text-blue-500 hover:text-blue-600'}>Sponsor</Link>
                                 </li>
                             </ul>
                         </div>
